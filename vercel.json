@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "rss-scraper": {
+      "schedule": "rate(24 hours)"
+    }
+  }
+}
