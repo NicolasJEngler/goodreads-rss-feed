@@ -3,6 +3,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const RSS = require('rss');
 const fs = require('fs');
+const path = require('path');
 
 const { PROJECT_URL } = process.env;
 
@@ -36,7 +37,8 @@ function createRSSFeed(url, feedTitle, feedDescription) {
       });
 
       const xml = feed.xml({ indent: true });
-      fs.writeFileSync('./../public/rss.xml', xml);
+      const parentDirectory = path.join(__dirname, '..'); // Resolve the parent directory
+      fs.writeFileSync(path.join(parentDirectory, 'public/rss.xml'), xml);
     }
   });
 }
