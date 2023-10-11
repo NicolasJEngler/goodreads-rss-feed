@@ -1,7 +1,8 @@
 {
-  "functions": {
-    "rss-scraper": {
-      "schedule": "rate(24 hours)"
+  "crons": [
+    {
+      "path": "/",
+      "schedule": "0 0 * * *"
     }
-  }
+  ]
 }
