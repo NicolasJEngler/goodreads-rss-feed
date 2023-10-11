@@ -36,7 +36,7 @@ function createRSSFeed(url, feedTitle, feedDescription) {
       });
 
       const xml = feed.xml({ indent: true });
-      fs.writeFileSync('public/rss.xml', xml);
+      fs.writeFileSync('./../public/rss.xml', xml);
     }
   });
 }
@@ -55,3 +55,5 @@ app.get('/generate-rss', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
