@@ -15,7 +15,7 @@ function createRSSFeed(url, feedTitle, feedDescription) {
       const feed = new RSS({
         title: feedTitle,
         description: feedDescription,
-        feed_url: `${PROJECT_URL}/rss.xml`,
+        feed_url: `${PROJECT_URL}/public/rss.xml`,
         site_url: url,
       });
 
@@ -37,7 +37,7 @@ function createRSSFeed(url, feedTitle, feedDescription) {
 
       // Save the RSS feed to a file
       const xml = feed.xml({ indent: true });
-      require('fs').writeFileSync('rss.xml', xml);
+      require('fs').writeFileSync('public/rss.xml', xml);
     }
   });
 }
