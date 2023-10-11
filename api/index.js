@@ -42,7 +42,7 @@ function createRSSFeed(url, feedTitle, feedDescription) {
 }
 
 // Example usage
-app.get('/generate-rss', (req, res) => {
+app.get('/api/generate-rss', (req, res) => {
   createRSSFeed(
     'https://www.goodreads.com/news',
     'Goodreads RSS Feed',
